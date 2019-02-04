@@ -3,11 +3,16 @@ const path = require('path'),
 	webpack = require('webpack');
 
 module.exports = {
-	entry: './home.js',
+	context: __dirname + '/frontend',
+
+	entry: {		
+		home: './home',
+		about: './about'
+	},
 	output: {
-		path: path.resolve(__dirname, ''),
-		filename: 'build.js',
-		library: 'home'
+		path: __dirname + '/public',
+		filename: '[name].js',
+		library: '[name]'
 	},
 
 	watch: NODE_ENV == 'development',
