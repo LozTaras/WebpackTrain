@@ -46,5 +46,8 @@ module.exports = {
 
 	optimization: {
 		minimize: NODE_ENV == 'production' ? true : false,
+		runtimeChunk: { 
+			name: 'common' 
+		},
 	}
 }
