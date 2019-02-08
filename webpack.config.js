@@ -9,6 +9,7 @@ module.exports = {
 		home: './home',
 		about: './about'
 	},
+	
 	output: {
 		path: __dirname + '/public',
 		filename: '[name].js',
@@ -49,5 +50,8 @@ module.exports = {
 		runtimeChunk: { 
 			name: 'common' 
 		},
+		splitChunks: {
+			minChunks: 2,			
+		  }
 	}
 }
