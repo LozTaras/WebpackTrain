@@ -7,7 +7,8 @@ module.exports = {
 
 	entry: {		
 		home: './home',
-		about: './about'
+		about: './about',
+		common: './common'
 	},
 	
 	output: {
@@ -27,8 +28,7 @@ module.exports = {
 	plugins: [
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify(NODE_ENV),
-		}),
-		new webpack.NoEmitOnErrorsPlugin()
+		})
 	],
 
 	module: {
@@ -52,6 +52,6 @@ module.exports = {
 		},
 		splitChunks: {
 			minChunks: 2,			
-		  }
+		}
 	}
 }
